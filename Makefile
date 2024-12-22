@@ -9,6 +9,10 @@ $(exec): $(objects)
 %.o: %.c include/%.h 
 	gcc -c $(flags) $< -o $@
 
+install: 
+	make
+	cp ./haii.out /usr/local/bin/papuans
+
 clean: 
 	-rm *.out
 	-rm *.o
